@@ -25,6 +25,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  CUSTOM_PAGES_DOMAIN: ${{ vars.CUSTOM_PAGES_DOMAIN }}
+
 jobs:
   # Build job
   build:
